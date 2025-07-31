@@ -4,14 +4,20 @@
 :root {
   --background: #fdfdfd;
   --foreground: #333333;
-  --color-accent: #eeeeee;
+  --color-accent: #1db954;
+  --color-test-1: #3a3f48;
+  --color-test-2: #8a7b7b;
+  --color-test-3: #ece9e3;
+  --color-test-4: #e9c6a5;
+  --color-test-5: #ed814f;
 }
 
 @theme {
   --color-off-white: #fdfdfd;
   --color-off-black: #333333;
-  --color-accent: #eeeeee;
+  --color-accent: #ed814f;
   --font-body: var(--font-roboto);
+  --font-heading: var(--font-poppins);
   --text-small: 12px;
   --text-medium: 14px;
   --text-regular: 16px;
@@ -39,10 +45,31 @@ leading-loose bg-black relative tracking-wide font-light min-h-screen flex flex-
   @apply max-w-[1440px] px-30 md:px-60 mx-auto;
 }
 
-.btn-hover-accent {
-  @apply hover:bg-[var(--color-accent)] hover:text-off-black rounded-md;
+.heading {
+  @apply font-heading font-black text-[#111] uppercase text-center leading-[1] tracking-tight;
 }
 
-.landing-heading {
-  @apply text-heading-landing-small md:text-heading-landing-medium lg:text-heading-landing-large leading-tight uppercase font-light;
+.heading p {
+  font-size: clamp(2.5rem, -1.3032rem + 11.1702vw, 8.75rem);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: white;
+  z-index: -10;
+}
+
+.text-container p {
+  position: absolute;
+  -webkit-text-stroke-color: var(--color-accent);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  color: transparent;
+  margin: 0;
+}
+
+.text-container p.text-white {
+  position: relative; /* so it sits above absolute siblings */
+  color: white !important;
+  -webkit-text-stroke-color: white;
+  z-index: 30; /* make sure it's on top */
 }

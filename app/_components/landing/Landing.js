@@ -5,81 +5,64 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import SplitText from "gsap/SplitText";
-import "./landing.css";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 export default function Landing() {
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    const paragraphs = gsap.utils.toArray(".text-container p");
 
-    // SMOOTHER
-    const smoother = ScrollSmoother.create({
-      wrapper: "#wrapper",
-      content: "#content",
-      smooth: 1,
-      normalizeScroll: true,
-      ignoreMobileResize: true,
-      effects: true,
-      preventDefault: true,
+    paragraphs.forEach((el) => {
+      const speed = parseFloat(el.getAttribute("data-speed") || "1");
+
+      gsap.to(el, {
+        y: () => window.innerHeight * (1 - speed),
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".animation-start",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
     });
 
-    // ANIMATION
-    gsap.set(".heading", {
-      yPercent: -150,
-      opacity: 1,
-    });
-
-    let mySplitText = new SplitText("#split-stagger", { type: "words,chars" });
-    let chars = mySplitText.chars;
-
-    chars.forEach((char, i) => {
-      smoother.effects(char, { speed: 1, lag: (i + 1) * 0.1 });
-    });
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
   return (
-    <div id="wrapper" className="width-size">
-      <section id="content">
-        <div class="heading " aria-hidden="true">
+    <div className="">
+      <section className="width-size  h-screen  pt-[200px] animation-start flex flex-col items-center gap-150 ">
+        <div className="heading h-fit " aria-hidden="true">
           <p>turning vision</p>
 
-          <div class="text-container">
-            <div>
-              <p>into reality</p>
-              <p data-speed="0.95">into reality</p>
-              <p data-speed="0.9">into reality</p>
-              <p data-speed="0.85">into reality</p>
-              <p data-speed="0.8">into reality</p>
-              <p data-speed="0.75">into reality</p>
-              <p data-speed="0.7">into reality</p>
-            </div>
+          <div className="relative text-container">
+            <p className="text-white ">into reality</p>
+            <p data-speed="0.95">into reality</p>
+            <p data-speed="0.9">into reality</p>
+            <p data-speed="0.85">into reality</p>
+            <p data-speed="0.8">into reality</p>
+            <p data-speed="0.75">into reality</p>
+            <p data-speed="0.7">into reality</p>
           </div>
         </div>
 
-        <section class="image-grid container">
-          <div class="image_cont" data-speed="1">
-            <img
-              data-speed="auto"
-              src="https://images.unsplash.com/photo-1556856425-366d6618905d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG5lb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
-              alt=""
-            />
-          </div>
-          <div class="image_cont" data-speed="1.7">
-            <img
-              data-speed="auto"
-              src="https://images.unsplash.com/photo-1520271348391-049dd132bb7c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-              alt=""
-            />
-          </div>
-          <div class="image_cont" data-speed="1.5">
-            <img
-              data-speed="auto"
-              src="https://images.unsplash.com/photo-1609166214994-502d326bafee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-              alt=""
-            />
-          </div>
-        </section>
+        <div>
+          <p className="text-white uppercase w-[75%] text-center mx-auto">
+            We are a digital agency specializing in web design, development, and
+            digital marketing. Whether you need a high-performing website,
+            targeted advertising, or a stronger online presence, our services
+            are tailored to meet your specific goals.
+          </p>
+        </div>
+        <div className="fixed bottom-60">
+          <button className="btn border-none text-white bg-[var(--color-accent)]">
+            Get a free quote
+          </button>
+        </div>
       </section>
+      <section className="h-screen width-size bg-pink-100"></section>
     </div>
   );
 }
