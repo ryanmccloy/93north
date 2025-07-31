@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --background: #fdfdfd;
+  --foreground: #333333;
+  --color-accent: #eeeeee;
+}
+
+@theme {
+  --color-off-white: #fdfdfd;
+  --color-off-black: #333333;
+  --color-accent: #eeeeee;
+  --font-body: var(--font-roboto);
+  --text-small: 12px;
+  --text-medium: 14px;
+  --text-regular: 16px;
+  --text-large: 22px;
+  --text-heading-small: 30px;
+  --text-heading-medium: 38px;
+  --text-heading-large: 48px;
+  --text-heading-landing-small: 48px;
+  --text-heading-landing-medium: 74px;
+  --text-heading-landing-large: 90px;
+  --spacing-15: 15px;
+  --spacing-30: 30px;
+  --spacing-60: 60px;
+  --spacing-90: 90px;
+  --spacing-120: 120px;
+  --spacing-150: 150px;
+}
+
+.body-styles {
+  @apply font-body text-regular
+leading-loose bg-black relative tracking-wide font-light min-h-screen flex flex-col;
+}
+
+.width-size {
+  @apply max-w-[1440px] px-30 md:px-60 mx-auto;
+}
+
+.btn-hover-accent {
+  @apply hover:bg-[var(--color-accent)] hover:text-off-black rounded-md;
+}
+
+.landing-heading {
+  @apply text-heading-landing-small md:text-heading-landing-medium lg:text-heading-landing-large leading-tight uppercase font-light;
+}
