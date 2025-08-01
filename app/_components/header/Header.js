@@ -1,4 +1,4 @@
-import Logo from "../landing/Logo";
+import Logo from "../reusable/Logo";
 
 export default function Header() {
   return (

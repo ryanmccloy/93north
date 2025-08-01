@@ -4,12 +4,8 @@
 :root {
   --background: #fdfdfd;
   --foreground: #333333;
-  --color-accent: #1db954;
-  --color-test-1: #3a3f48;
-  --color-test-2: #8a7b7b;
-  --color-test-3: #ece9e3;
-  --color-test-4: #e9c6a5;
-  --color-test-5: #ed814f;
+  /* --color-accent: #4cf1f9; */
+  --color-accent: #5ce65c;
 }
 
 @theme {
@@ -58,7 +54,7 @@ leading-loose bg-black relative tracking-wide font-light min-h-screen flex flex-
 
 .text-container p {
   position: absolute;
-  -webkit-text-stroke-color: var(--color-accent);
+  /* -webkit-text-stroke-color: var(--color-accent); */
   top: 0;
   left: 0;
   right: 0;
@@ -72,4 +68,14 @@ leading-loose bg-black relative tracking-wide font-light min-h-screen flex flex-
   color: white !important;
   -webkit-text-stroke-color: white;
   z-index: 30; /* make sure it's on top */
+}
+
+.bg-container div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
 }
