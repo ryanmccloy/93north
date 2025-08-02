@@ -34,7 +34,7 @@
 
 .body-styles {
   @apply font-body text-regular
-leading-loose bg-white relative tracking-wide font-light min-h-screen flex flex-col;
+leading-loose bg-white relative tracking-wide font-light min-h-screen flex flex-col text-black;
 }
 
 .width-size {
