@@ -4,14 +4,14 @@
 :root {
   --background: #fdfdfd;
   --foreground: #333333;
-  /* --color-accent: #4cf1f9; */
-  --color-accent: #5ce65c;
+  --color-accent: #06b6d4;
 }
 
 @theme {
   --color-off-white: #fdfdfd;
   --color-off-black: #333333;
-  --color-accent: #ed814f;
+  --color-accent: #06b6d4;
+  /* --color-accent: #5ce65c; */
   --font-body: var(--font-roboto);
   --font-heading: var(--font-poppins);
   --text-small: 12px;
@@ -34,27 +34,28 @@
 
 .body-styles {
   @apply font-body text-regular
-leading-loose bg-black relative tracking-wide font-light min-h-screen flex flex-col;
+leading-loose bg-white relative tracking-wide font-light min-h-screen flex flex-col;
 }
 
 .width-size {
   @apply max-w-[1660px] px-30 md:px-60 mx-auto;
 }
 
-.heading {
+/* HERO HEADING PARALLAX EFFECT STYLING */
+
+.hero-heading {
   @apply font-heading font-black text-[#111] uppercase text-center leading-[1] tracking-tight;
 }
 
-.heading p {
+.hero-heading h1 {
   font-size: clamp(2.3rem, -1.3032rem + 11.1702vw, 8.75rem);
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: white;
   z-index: -10;
 }
 
-.text-container p {
+.hero-heading-container h1 {
   position: absolute;
-  /* -webkit-text-stroke-color: var(--color-accent); */
   top: 0;
   left: 0;
   right: 0;
@@ -63,14 +64,14 @@ leading-loose bg-black relative tracking-wide font-light min-h-screen flex flex-
   margin: 0;
 }
 
-.text-container p.text-white {
+.hero-heading-container h1.text-white {
   position: relative; /* so it sits above absolute siblings */
   color: white !important;
   -webkit-text-stroke-color: white;
   z-index: 30; /* make sure it's on top */
 }
 
-.bg-container div {
+.hero-bg-container div {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -78,4 +79,15 @@ leading-loose bg-black relative tracking-wide font-light min-h-screen flex flex-
   left: 0;
   right: 0;
   margin: 0;
+}
+
+.service-heading {
+  @apply font-heading font-black uppercase text-center leading-[1] tracking-normal text-nowrap;
+}
+
+.service-heading {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: clamp(2.3rem, -1.3032rem + 11.1702vw, 7.5rem);
+  color: transparent;
 }

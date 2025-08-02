@@ -1,8 +1,9 @@
+import Button from "../reusable/Button";
 import Logo from "../reusable/Logo";
 
 export default function Header() {
   return (
-    <div className="navbar fixed text-off-white bg-black shadow-sm z-50 w-full px-0 py-4 ">
+    <div className="navbar fixed text-off-white bg-black shadow-sm z-50 w-full px-0 py-2 ">
       <div className="width-size flex justify-between items-center w-full ">
         <div className="navbar-start  ">
           <div className="dropdown hover:cursor-pointer text-off-black">
@@ -67,9 +68,7 @@ export default function Header() {
           </ul>
         </div>
         <div className="navbar-end ">
-          <button className="btn border text-[var(--color-accent)] border-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white bg-transparent">
-            Contact{" "}
-          </button>
+          <Button secondary={true}>Contact Us</Button>
         </div>
       </div>
     </div>

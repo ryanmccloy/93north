@@ -1,11 +1,11 @@
-import Landing from "@/app/_components/landing/Landing";
-import AboutUs from "./_components/landing/AboutUs";
+import Hero from "@/app/_components/landing/Hero";
+import Services from "./_components/landing/Services";
 
 export default function Home() {
   return (
     <div>
-      <Landing />
-      <AboutUs />
+      <Hero />
+      <Services />
     </div>
   );
 }
