@@ -5,7 +5,6 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import SplitText from "gsap/SplitText";
-import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
@@ -50,18 +49,15 @@ export default function Landing() {
   }, []);
 
   return (
-    <div className="animation-start relative   h-screen">
+    <div className="animation-start relative   h-screen min-h-[850px] max-h-[1200px]">
       <div className="relative bg-black w-full h-full z-20">
-        <section className="width-size relative  h-full pt-[200px]   ">
+        <section className="width-size flex flex-col justify-between relative  h-full pt-[250px]   xl:pt-[200px] pb-90   ">
           <div className="heading h-fit" aria-hidden="true">
             <p>turning vision</p>
 
             <div className="relative text-container">
               <p className="text-white ">into reality</p>
-              {/* <p data-speed="0.95">into reality</p>
-              <p data-speed="0.9">into reality</p>
-              <p data-speed="0.85">into reality</p>
-              <p data-speed="0.8">into reality</p> */}
+
               <p data-speed="0.95" style={{ WebkitTextStroke: "1px #f5f5f5" }}>
                 into reality
               </p>
@@ -77,8 +73,8 @@ export default function Landing() {
             </div>
           </div>
 
-          <div className="absolute bottom-90 left-0  w-full flex flex-col items-center gap-30">
-            <p className="text-white uppercase w-[75%] text-center mx-auto">
+          <div className="   flex flex-col items-center gap-30">
+            <p className="text-white uppercase  md:w-[75%] text-center mx-auto">
               We are a digital agency specializing in web design, development,
               and digital marketing. Whether you need a high-performing website,
               targeted advertising, or a stronger online presence, our services
