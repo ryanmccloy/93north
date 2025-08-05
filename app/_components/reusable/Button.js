@@ -14,7 +14,7 @@ function Button({ children, underline = false }) {
       </span>
     </button>
   ) : (
-    <button className="group relative overflow-hidden hover:cursor-pointer border-b-2 border-accent uppercase text-accent font-medium">
+    <button className=" h-fit group relative overflow-hidden hover:cursor-pointer border-b-2 border-accent uppercase text-accent font-medium w-fit">
       <span className="block relative">
         {/* Default text */}
         <span className="text-dark block transition-transform duration-300 ease-in-out group-hover:-translate-y-full">

@@ -17,9 +17,10 @@
   --text-medium: 14px;
   --text-regular: 16px;
   --text-large: 22px;
-  --text-heading-small: 30px;
-  --text-heading-medium: 38px;
-  --text-heading-large: 48px;
+  --text-heading-extrasmall: 36px;
+  --text-heading-small: 48px;
+  --text-heading-medium: 65px;
+  --text-heading-large: 90px;
   --text-heading-landing-extrasmall: 60px;
   --text-heading-landing-small: 75px;
   --text-heading-landing-medium: 90px;
@@ -41,6 +42,22 @@ leading-loose bg-light text-dark relative tracking-wide font-light min-h-screen 
   @apply max-w-[1660px] px-30 md:px-60 mx-auto;
 }
 
+.section-styles {
+  @apply pt-60 md:pt-90 lg:pt-120 pb-30 md:pb-60 lg:pb-90;
+}
+
 .hero-heading {
   @apply text-heading-landing-extrasmall sm:text-heading-landing-small md:text-heading-landing-medium lg:text-heading-landing-large font-heading uppercase leading-[1];
+}
+
+.section-heading {
+  @apply text-heading-small sm:text-heading-medium md:text-heading-large font-heading uppercase leading-[1];
+}
+
+.service-heading {
+  @apply text-heading-extrasmall sm:text-heading-small md:text-heading-medium font-heading uppercase leading-[1];
+}
+
+.strong-paragraph {
+  @apply font-normal  uppercase  lg:text-large;
 }

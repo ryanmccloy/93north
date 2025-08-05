@@ -26,7 +26,7 @@ const mont = Montserrat({
 });
 
 export const metadata = {
-  title: "93 North Studios",
+  title: "93 North Studio",
   description: "Full service online digital agency",
   icons: {
     icon: "/icon.svg",
