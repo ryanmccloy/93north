@@ -5,7 +5,7 @@ function Logo({ height = 60, width = 60 }) {
   return (
     <Link href="/">
       <Image
-        src="/logo/logo.png"
+        src="/logo/logo-no-bg.png"
         alt="93 North Studio Logo"
         width={width}
         height={height}

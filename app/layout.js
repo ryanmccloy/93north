@@ -1,12 +1,13 @@
-import { Roboto, Poppins } from "next/font/google";
+import { Montserrat, Poppins, Bebas_Neue } from "next/font/google";
 import "@/app/_styles/globals.css";
 import Header from "./_components/header/Header";
 import Footer from "./_components/footer/Footer";
 
-export const rob = Roboto({
-  variable: "--font-roboto",
+const bebas = Bebas_Neue({
+  variable: "--font-bebas",
+  weight: "400",
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "700"],
+  display: "swap",
 });
 
 const pop = Poppins({
@@ -14,6 +15,13 @@ const pop = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
+  display: "swap",
+});
+
+const mont = Montserrat({
+  variable: "--montserrat",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], // Choose weights you plan to use
   display: "swap",
 });
 
@@ -29,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${rob.variable} ${pop.variable} font-sans antialiased`}
+      className={`${bebas.variable} ${pop.variable} ${mont.variable} font-sans antialiased`}
     >
       <body className="body-styles">
         <Header />

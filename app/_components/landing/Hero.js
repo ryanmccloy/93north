@@ -1,18 +1,39 @@
-import HeroHeading from "./HeroHeading";
-import HeroCTA from "./HeroCTA";
-import HeroBgLayers from "./HeroBgLayers";
+import Image from "next/image";
+import Button from "../reusable/Button";
 
-export default function Hero() {
+function Hero() {
   return (
-    <section className="animation-start relative  h-screen min-h-[850px] max-h-[1200px]">
-      <div className="relative bg-[black] w-full h-full z-20">
-        <div className="width-size flex flex-col justify-between relative  h-full pt-[250px]   xl:pt-[200px] pb-90   ">
-          <HeroHeading />
+    <section className="h-screen  flex flex-col gap-60  bg-off-white pt-[150px] min-h-fit">
+      <div className="width-size   w-full flex flex-col gap-15">
+        <h1 className=" hero-heading xl:hidden">
+          Elevate your <br></br> online presence
+        </h1>
+        <h1 className=" hero-heading hidden xl:block">
+          Elevate your online presence
+        </h1>
 
-          <HeroCTA />
+        <p className="uppercase ">
+          At 93 North we specialise in custom web design, development, and
+          digitial marketing.
+        </p>
+        <div className="flex gap-15">
+          <span className="uppercase">Have an idea?</span>
+          <Button underline={true}>Get a free quote</Button>
         </div>
       </div>
-      <HeroBgLayers />
+
+      <div className="relative w-full flex-1 min-h-[300px] max-h-[700px] ">
+        <Image
+          src="/images/landing/hero-test.webp"
+          alt="Escalator ascending"
+          fill
+          className="object-cover object-top"
+          quality={100}
+          priority={true}
+        />
+      </div>
     </section>
   );
 }
+
+export default Hero;

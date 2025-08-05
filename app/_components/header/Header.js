@@ -1,17 +1,14 @@
 import Button from "../reusable/Button";
 import Logo from "../reusable/Logo";
+import NavBarLink from "../reusable/NavBarLink";
 
 export default function Header() {
   return (
-    <div className="navbar fixed text-off-white bg-black shadow-sm z-50 w-full px-0 py-2 ">
+    <div className="navbar fixed backdrop-blur-sm shadow-xs z-50 w-full px-0 py-2 ">
       <div className="width-size flex justify-between items-center w-full ">
         <div className="navbar-start  ">
           <div className="dropdown hover:cursor-pointer text-off-black">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn-ghost border-none shadow-sm mr-15 lg:hidden"
-            >
+            <div tabIndex={0} role="button" className=" mr-30 lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-7 w-7 text-off-white"
@@ -52,23 +49,20 @@ export default function Header() {
           <Logo />
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-2">
+          <ul className="flex gap-30">
             <li>
-              <a className="btn-hover-accent">About</a>
+              <NavBarLink href={"/"}>Services</NavBarLink>
             </li>
             <li>
-              <a className="btn-hover-accent">Services</a>
+              <NavBarLink href={"/"}>Work</NavBarLink>
             </li>
             <li>
-              <a className="btn-hover-accent">Work</a>
-            </li>
-            <li>
-              <a className="btn-hover-accent">Testimonials</a>
+              <NavBarLink href={"/"}>Testimonials</NavBarLink>
             </li>
           </ul>
         </div>
         <div className="navbar-end ">
-          <Button secondary={true}>Contact Us</Button>
+          <Button>Contact Us</Button>
         </div>
       </div>
     </div>
