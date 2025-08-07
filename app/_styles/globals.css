@@ -4,12 +4,14 @@
 :root {
   --background: #fafafa;
   --foreground: #000000;
+  --secondary-grey: #efefef;
   --color-accent: #fe7d28;
 }
 
 @theme {
   --color-light: #fafafa;
   --color-dark: #000000;
+  --color-secondary-grey: #efefef;
   --color-accent: #fe7d28;
   --font-body: var(--font-montserrat);
   --font-heading: var(--font-bebas);
@@ -51,13 +53,31 @@ leading-loose bg-light text-dark relative tracking-wide font-light min-h-screen 
 }
 
 .section-heading {
-  @apply text-heading-small sm:text-heading-medium md:text-heading-large font-heading uppercase leading-[1];
+  @apply text-heading-small sm:text-heading-medium md:text-heading-large font-heading uppercase leading-[1] mb-60 md:mb-90;
 }
 
 .service-heading {
   @apply text-heading-extrasmall sm:text-heading-small md:text-heading-medium font-heading uppercase leading-[1];
 }
 
+.standard-heading {
+  @apply text-heading-extrasmall sm:text-heading-small   uppercase leading-[1];
+}
+
 .strong-paragraph {
   @apply font-normal  uppercase  lg:text-large;
+}
+
+/* REVIEWS BANNER ANIMATION */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 30px));
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 60s linear infinite;
 }

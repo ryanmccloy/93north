@@ -39,9 +39,10 @@ function Services() {
         </div>
       </div>
 
-      <div className="section-styles flex flex-col gap-60 md:gap-90">
+      <div className="section-styles">
         <h2 className="section-heading ">What We Do</h2>
-        <div className="flex flex-col gap-90 lg:gap-60">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-90">
           {services.map((service, index) => {
             return (
               <ServiceContainer
