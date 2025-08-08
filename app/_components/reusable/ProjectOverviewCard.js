@@ -1,14 +1,22 @@
+import Image from "next/image";
+
 function ProjectOverviewCard() {
   return (
-    <div className=" border-l-2 pl-15 md:pl-30 border-l-accent flex flex-col gap-15 ">
-      {/* <span>card</span>
-      <div className="h-[400px] w-[300px] bg-green-200 rounded-xl"></div> */}
-      <div>E-commerce integration</div>
-      <div>Stripe payment setup</div>
-      <div>Responsive design</div>
-      <div>Blog setup</div>
-      <div>SEO optimisation</div>
-    </div>
+    <ul className="grid grid-cols-2 gap-15">
+      {[
+        "E-commerce integration",
+        "Stripe payment setup",
+        "Responsive design",
+        "SEO optimisation",
+      ].map((item) => (
+        <li
+          key={item}
+          className="flex items-center gap-2 before:content-[''] before:block before:w-2 before:h-2 before:bg-accent"
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
   );
 }
 
