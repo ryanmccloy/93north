@@ -33,6 +33,9 @@
   --spacing-90: 90px;
   --spacing-120: 120px;
   --spacing-150: 150px;
+  --breakpoint-projectOverview-mediumScreen: 505px;
+  --breakpoint-projectOverview-largeScreen: 1070px;
+  --breakpoint-projectOverview-extraLargeScreen: 1124px;
 }
 
 .body-styles {

@@ -1,7 +1,9 @@
 function Footer() {
   return (
-    <footer className=" bg-dark text-light">
-      <div className="width-size section-styles"></div>
+    <footer className=" ">
+      <div className="width-size section-styles">
+        <span className="hero-heading text-white">93 North</span>
+      </div>
     </footer>
   );
 }
