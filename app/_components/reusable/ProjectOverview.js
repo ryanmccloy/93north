@@ -4,12 +4,23 @@ import ProjectOverviewCard from "./ProjectOverviewCard";
 
 function ProjectOverview() {
   return (
-    <div className="bg-light rounded-2xl p-15 md:p-30 flex flex-col gap-90">
-      <div className="grid grid-cols-1 gap-30 projectOverview-largeScreen:grid-cols-2 projectOverview-largeScreen:gap-60 xl:gap-x-120 projectOverview-largeScreen:auto-rows-min">
+    <div className="bg-light rounded-2xl p-15 md:p-30 ">
+      <div
+        className="grid grid-cols-1 gap-30 
+      projectOverview-mediumScreen:gap-60 projectOverview-largeScreen:grid-cols-2 
+      
+      projectOverview-largeScreen:auto-rows-min
+      projectOverview-extraExtraLargeScreen:gap-x-120 "
+      >
         {/* Top left heading + button */}
         <div className=" h-fit projectOverview-largeScreen:col-start-1 projectOverview-largeScreen:row-start-1">
-          <div className="flex gap-30 justify-between items-end">
+          <div
+            className="flex flex-col gap-30 
+          projectOverview-smallScreen:flex-row
+          projectOverview-smallScreen:justify-between projectOverview-smallScreen:items-end"
+          >
             <h4 className="standard-heading">Goneichiwa</h4>
+
             <Button underline={true}>Visit site</Button>
           </div>
         </div>
@@ -31,8 +42,8 @@ function ProjectOverview() {
   
         "
         >
-          <div className="flex flex-col gap-15">
-            <p className="max-w-[750px]">
+          <div className="flex flex-col justify-end gap-15  h-full ">
+            <p>
               Goneichiwa is a modern travel e-commerce platform designed to make
               trip planning easier and more personal. It offers beautifully
               designed, downloadable PDF travel guides covering various

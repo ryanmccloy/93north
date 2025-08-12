@@ -33,9 +33,11 @@
   --spacing-90: 90px;
   --spacing-120: 120px;
   --spacing-150: 150px;
+  --breakpoint-projectOverview-smallScreen: 421px;
   --breakpoint-projectOverview-mediumScreen: 505px;
   --breakpoint-projectOverview-largeScreen: 1070px;
   --breakpoint-projectOverview-extraLargeScreen: 1124px;
+  --breakpoint-projectOverview-extraExtraLargeScreen: 1550px;
 }
 
 .body-styles {
@@ -48,7 +50,7 @@ leading-loose bg-light text-dark relative tracking-wide font-light min-h-screen 
 }
 
 .section-styles {
-  @apply pt-60 md:pt-90 lg:pt-120 pb-30 md:pb-60 lg:pb-90;
+  @apply pt-90 md:pt-120  pb-90 md:pb-120;
 }
 
 .hero-heading {

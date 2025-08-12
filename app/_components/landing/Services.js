@@ -26,8 +26,8 @@ const services = [
 
 function Services() {
   return (
-    <section className="width-size ">
-      <div className=" section-styles flex flex-col gap-30 md:gap-60 lg:flex-row lg:justify-between lg:items-end">
+    <section className="width-size section-styles">
+      <div className=" flex flex-col gap-30 md:gap-60 lg:flex-row lg:justify-between lg:items-end">
         <p className="max-w-[750px] strong-paragraph border-l-2  border-l-accent pl-15 md:pl-30">
           We’re a digital agency based in Northern Ireland, focused on creating
           websites and online strategies that work. From design to development
@@ -39,7 +39,7 @@ function Services() {
         </div>
       </div>
 
-      <div className="section-styles">
+      <div className="mt-90 md:mt-120">
         <h2 className="section-heading ">What We Do</h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-90">
