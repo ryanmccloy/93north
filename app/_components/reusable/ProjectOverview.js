@@ -32,7 +32,7 @@ function ProjectOverview() {
             src="/images/landing/mockup.webp"
             width={750}
             height={562}
-            className="w-full h-auto object-cover rounded-2xl"
+            className="w-full h-auto object-cover rounded-xl"
           />
         </div>
 

@@ -1,5 +1,4 @@
 import ProjectOverview from "../reusable/ProjectOverview";
-import ScrollingBanner from "../reusable/ScrollingBanner";
 
 function Work() {
   return (
@@ -8,7 +7,6 @@ function Work() {
         <h2 className="section-heading">Work</h2>
         <ProjectOverview />
       </div>
-      <ScrollingBanner />
     </div>
   );
 }

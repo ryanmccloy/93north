@@ -1,6 +1,6 @@
 function Button({ children, underline = false }) {
   return !underline ? (
-    <button className="rounded-full bg-accent group relative overflow-hidden  py-2 px-4 border border-accent hover:cursor-pointer  ">
+    <button className="rounded-full bg-accent group relative overflow-hidden  py-2 px-4 border border-accent hover:cursor-pointer w-fit uppercase ">
       <span className="block relative ">
         {/* Default text */}
         <span className="block transition-transform text-dark duration-300 ease-in-out group-hover:-translate-y-full">

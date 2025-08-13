@@ -61,9 +61,9 @@ leading-loose bg-light text-dark relative tracking-wide font-light min-h-screen 
   @apply text-heading-small sm:text-heading-medium md:text-heading-large font-heading uppercase leading-[1] mb-60 md:mb-90;
 }
 
-.service-heading {
+/* .service-heading {
   @apply text-heading-extrasmall sm:text-heading-small md:text-heading-medium font-heading uppercase leading-[1];
-}
+} */
 
 .standard-heading {
   @apply text-heading-extrasmall sm:text-heading-small   uppercase leading-[1];
@@ -71,6 +71,22 @@ leading-loose bg-light text-dark relative tracking-wide font-light min-h-screen 
 
 .strong-paragraph {
   @apply font-normal  uppercase  lg:text-large;
+}
+
+.grid-standard {
+  @apply grid grid-cols-1 gap-60 lg:grid-cols-2 lg:gap-120;
+}
+
+.contact-form-heading {
+  @apply text-large lg:text-heading-extrasmall  uppercase leading-[1];
+}
+
+.contact-form-spacing {
+  @apply flex flex-col gap-15;
+}
+
+.contact-form-input {
+  @apply border-b-2 border-b-accent;
 }
 
 /* REVIEWS BANNER ANIMATION */

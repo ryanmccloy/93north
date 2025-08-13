@@ -24,7 +24,7 @@ function Hero() {
 
       <div className="relative w-full flex-1 min-h-[300px] max-h-[700px] ">
         <Image
-          src="/images/landing/hero-test.webp"
+          src="/images/landing/hero.webp"
           alt="Escalator ascending"
           fill
           className="object-cover object-top"
