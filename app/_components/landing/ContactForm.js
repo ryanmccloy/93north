@@ -56,7 +56,9 @@ function ContactForm() {
         ></textarea>
       </div>
 
-      <Button type="submit">Send Message</Button>
+      <div className="text-center lg:text-start">
+        <Button type="submit">Send Message</Button>
+      </div>
     </form>
   );
 }

@@ -86,7 +86,12 @@ leading-loose bg-light text-dark relative tracking-wide font-light min-h-screen 
 }
 
 .contact-form-input {
-  @apply border-b-2 border-b-accent;
+  @apply border-b border-secondary-grey bg-transparent focus:outline-none;
+  transition: border-color 0.2s ease;
+}
+
+.contact-form-input:focus {
+  border-color: var(--color-accent);
 }
 
 /* REVIEWS BANNER ANIMATION */
