@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Testimonials() {
   return (
-    <div className="width-size section-styles">
+    <div className="width-size section-styles" id="testimonials">
       <p className="  max-w-[750px] strong-paragraph border-l-2  border-l-accent pl-15 md:pl-30">
         Every project is a collaboration — and our clients are at the heart of
         everything we build. From concept to launch, we focus on making the

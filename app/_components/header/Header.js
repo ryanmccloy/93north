@@ -51,13 +51,13 @@ export default function Header() {
         <div className="navbar-center hidden lg:flex">
           <ul className="flex gap-30">
             <li>
-              <NavBarLink href={"/"}>Services</NavBarLink>
+              <NavBarLink href="#services">Services</NavBarLink>
             </li>
             <li>
-              <NavBarLink href={"/"}>Work</NavBarLink>
+              <NavBarLink href="#work">Work</NavBarLink>
             </li>
             <li>
-              <NavBarLink href={"/"}>Testimonials</NavBarLink>
+              <NavBarLink href="#testimonials">Testimonials</NavBarLink>
             </li>
           </ul>
         </div>

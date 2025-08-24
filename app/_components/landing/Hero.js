@@ -3,7 +3,10 @@ import Button from "../reusable/Button";
 
 function Hero() {
   return (
-    <section className="h-screen  flex flex-col gap-60 md:gap-90 lg:gap-120  bg-off-white pt-[150px] min-h-fit">
+    <section
+      className="h-screen  flex flex-col gap-60 md:gap-90 lg:gap-120  bg-off-white pt-[150px] min-h-fit"
+      id="hero"
+    >
       <div className="width-size   w-full flex flex-col gap-15">
         <h1 className=" hero-heading xl:hidden">
           Elevate your <br></br> online presence

@@ -40,6 +40,10 @@
   --breakpoint-projectOverview-extraExtraLargeScreen: 1550px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .body-styles {
   @apply font-body text-regular
 leading-loose bg-light text-dark relative tracking-wide font-light min-h-screen flex flex-col;

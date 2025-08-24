@@ -26,7 +26,7 @@ const services = [
 
 function Services() {
   return (
-    <section className="width-size section-styles">
+    <section className="width-size section-styles" id="services">
       <div className=" grid-standard">
         <p className="max-w-[750px] strong-paragraph border-l-2  border-l-accent pl-15 md:pl-30">
           We’re a digital agency based in Northern Ireland, focused on creating
