@@ -42,7 +42,7 @@
 
 .body-styles {
   @apply font-body text-regular
-leading-loose bg-orange-200 text-dark relative tracking-wide font-light min-h-screen flex flex-col;
+leading-loose bg-light text-dark relative tracking-wide font-light min-h-screen flex flex-col;
 }
 
 .width-size {
