@@ -35,7 +35,9 @@ function Services() {
         </p>
         <div className="self-end flex flex-col gap-15">
           <p className="uppercase font-normal">Have a project in mind?</p>
-          <Button underline={true}>Get in touch</Button>
+          <Button underline={true} link={true} href="#contact">
+            Get in touch
+          </Button>
         </div>
       </div>
 

@@ -23,12 +23,12 @@ function Testimonials() {
 
         <div>
           <blockquote className="italic max-w-[850px] lg:text-large">
-            "93 North built us a beautiful, powerful site that’s ready to grow
-            as we do. They gave us everything we need to launch with confidence
-            — from the design to the e-commerce setup — so we can now focus on
-            creating products, travel guides, and a blog for our audience. It
-            feels amazing knowing our online home is built to scale and set us
-            up for long-term success."
+            &quot;93 North built us a beautiful, powerful site that’s ready to
+            grow as we do. They gave us everything we need to launch with
+            confidence — from the design to the e-commerce setup — so we can now
+            focus on creating products, travel guides, and a blog for our
+            audience. It feels amazing knowing our online home is built to scale
+            and set us up for long-term success.&quot;
           </blockquote>
         </div>
       </div>

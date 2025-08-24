@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 
 function ContactUs() {
   return (
-    <div className="section-styles ">
+    <div className="section-styles " id="contact">
       <div className="width-size mb-90 md:mb-120">
         <h2 className="section-heading">Get in touch</h2>
 

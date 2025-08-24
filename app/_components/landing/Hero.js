@@ -21,7 +21,9 @@ function Hero() {
         </p>
         <div className="flex gap-15">
           <span className="uppercase font-normal">Have an idea?</span>
-          <Button underline={true}>Get a quote</Button>
+          <Button underline={true} link={true} href="#contact">
+            Get a quote
+          </Button>
         </div>
       </div>
 

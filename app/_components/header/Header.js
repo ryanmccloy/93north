@@ -62,7 +62,9 @@ export default function Header() {
           </ul>
         </div>
         <div className="navbar-end ">
-          <Button>Contact Us</Button>
+          <Button link={true} href="#contact">
+            Contact Us
+          </Button>
         </div>
       </div>
     </div>
