@@ -1,10 +1,10 @@
 import NavBarLink from "../reusable/NavBarLink";
 import { sections } from "../../_lib/constants";
 
-function NavCenter() {
+function FooterNav() {
   return (
-    <div className="navbar-center hidden lg:flex">
-      <ul className="flex gap-30">
+    <nav aria-label="Footer navigation">
+      <ul className="grid grid-cols-1 sm:grid-cols-3 gap-30">
         {sections.map((section) => {
           return (
             <li key={section}>
@@ -13,8 +13,8 @@ function NavCenter() {
           );
         })}
       </ul>
-    </div>
+    </nav>
   );
 }
 
-export default NavCenter;
+export default FooterNav;

@@ -1,7 +1,8 @@
 import Logo from "../reusable/Logo";
 import SmallBurgerNavLink from "../reusable/SmallBurgerNavLink";
+import { sections } from "../../_lib/constants";
 
-function NavStart({ sections }) {
+function NavStart() {
   return (
     <div className="navbar-start  ">
       <div className="dropdown cursor-pointer text-off-black">

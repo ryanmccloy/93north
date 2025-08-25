@@ -2,8 +2,6 @@ import NavCenter from "./NavCenter";
 import NavEnd from "./NavEnd";
 import NavStart from "./NavStart";
 
-const sections = ["services", "work", "testimonials"];
-
 export default function Header() {
   return (
     <nav
@@ -11,8 +9,8 @@ export default function Header() {
       aria-label="Primary Navigation"
     >
       <div className="width-size flex justify-between items-center w-full ">
-        <NavStart sections={sections} />
-        <NavCenter sections={sections} />
+        <NavStart />
+        <NavCenter />
         <NavEnd />
       </div>
     </nav>
