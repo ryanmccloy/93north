@@ -51,7 +51,7 @@ const main = {
 };
 
 const container = {
-  margin: "0 auto",
+  margin: "12px auto",
   padding: "40px 24px",
   backgroundColor: "#ffffff",
   borderRadius: "12px",
