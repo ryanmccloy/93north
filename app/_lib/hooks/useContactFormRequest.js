@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { saveContactForm } from "../data-service";
 
 export default function useContactFormRequest() {
   const [loading, setLoading] = useState(false);
@@ -12,12 +11,16 @@ export default function useContactFormRequest() {
 
     try {
       await toast.promise(
-        saveContactForm(data),
+        fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }).then((res) => res.json()),
         {
           loading: "Sending message...",
           success: "Message sent successfully! We will be in touch soon.",
           error:
-            "Failed to send message. Please try again or contact us at ryan@93northstudio.com",
+            "Failed to send message. Please try again or contact us at contact@93northstudio.com",
         },
         {
           style: {
