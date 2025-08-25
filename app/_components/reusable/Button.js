@@ -6,6 +6,7 @@ function Button({
   link = false,
   href = "/",
   anchor = false,
+  isActive = true,
 }) {
   // 4 MAIN USE CASES:
   // -  rounded link element
@@ -51,7 +52,9 @@ function Button({
 
   if (!underline && !link) {
     return (
-      <button className="rounded-button-styles group ">{roundedContent}</button>
+      <button className="rounded-button-styles group " disabled={!isActive}>
+        {roundedContent}
+      </button>
     );
   }
 

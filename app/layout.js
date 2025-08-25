@@ -1,4 +1,5 @@
 import { Montserrat, Poppins, Bebas_Neue } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "@/app/_styles/globals.css";
 import Header from "./_components/header/Header";
 import Footer from "./_components/footer/Footer";
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
     >
       <body className="body-styles">
         <Header />
+        <Toaster position="bottom-center" />
         <main>{children}</main>
         <Footer />
       </body>

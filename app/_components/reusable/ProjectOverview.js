@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
-import ProjectOverviewCard from "./ProjectOverviewCard";
+import ProjectOverviewFeature from "./ProjectOverviewFeature";
 
 function ProjectOverview() {
   return (
@@ -19,7 +19,7 @@ function ProjectOverview() {
           projectOverview-smallScreen:flex-row
           projectOverview-smallScreen:justify-between projectOverview-smallScreen:items-end"
           >
-            <h4 className="standard-heading">Goneichiwa</h4>
+            <h3 className="standard-heading">Goneichiwa</h3>
 
             <Button
               underline={true}
@@ -34,7 +34,7 @@ function ProjectOverview() {
         {/* Right column image */}
         <div className="projectOverview-largeScreen:col-start-2 projectOverview-largeScreen:row-start-1 projectOverview-largeScreen:row-span-2">
           <Image
-            alt="Goneichiwa website preview"
+            alt="Mockup of Goneichiwa travel platform homepage"
             src="/images/landing/mockup.webp"
             width={750}
             height={562}
@@ -74,7 +74,14 @@ function ProjectOverview() {
           
        "
         >
-          <ProjectOverviewCard />
+          <ProjectOverviewFeature
+            features={[
+              "E-commerce integration",
+              "Stripe payment setup",
+              "Responsive design",
+              "SEO optimisation",
+            ]}
+          />
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
-import Button from "../reusable/Button";
 import ServiceContainer from "../reusable/ServiceContainer";
+import ServicesCTA from "./ServicesCTA";
 
 const services = [
   {
@@ -27,19 +27,7 @@ const services = [
 function Services() {
   return (
     <section className="width-size section-styles" id="services">
-      <div className=" grid-standard">
-        <p className="max-w-[750px] strong-paragraph border-l-2  border-l-accent pl-15 md:pl-30">
-          We’re a digital agency based in Northern Ireland, focused on creating
-          websites and online strategies that work. From design to development
-          and marketing, we help businesses show up and stand out online.
-        </p>
-        <div className="self-end flex flex-col gap-15">
-          <p className="uppercase font-normal">Have a project in mind?</p>
-          <Button underline={true} link={true} href="#contact">
-            Get in touch
-          </Button>
-        </div>
-      </div>
+      <ServicesCTA />
 
       <div className="mt-90 md:mt-120">
         <h2 className="section-heading ">What We Do</h2>
@@ -48,8 +36,7 @@ function Services() {
           {services.map((service, index) => {
             return (
               <ServiceContainer
-                key={index}
-                isLeft={index % 2}
+                key={service.title}
                 title={service.title}
                 description={service.description}
               />

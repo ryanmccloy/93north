@@ -1,14 +1,7 @@
-import Image from "next/image";
-
-function ProjectOverviewCard() {
+function ProjectOverviewFeature({ features }) {
   return (
     <ul className=" projectOverview-mediumScreen:grid projectOverview-mediumScreen:grid-cols-2 gap-15 projectOverview-extraLargeScreen:flex projectOverview-extraLargeScreen:justify-between">
-      {[
-        "E-commerce integration",
-        "Stripe payment setup",
-        "Responsive design",
-        "SEO optimisation",
-      ].map((item) => (
+      {features.map((item) => (
         <li
           key={item}
           className=" flex items-center gap-2 before:content-[''] before:block before:w-2 before:h-2 before:bg-accent"
@@ -20,4 +13,4 @@ function ProjectOverviewCard() {
   );
 }
 
-export default ProjectOverviewCard;
+export default ProjectOverviewFeature;
