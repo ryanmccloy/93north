@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const contactFormSchema = z.object({
-  name: z.string().min(1, "Name is required"),
+  name: z.string().trim().min(1, "Name is required"),
   email: z.string().email("Invalid email address"),
   phone: z
     .string()
@@ -9,5 +9,5 @@ export const contactFormSchema = z.object({
     .refine((val) => !val || /^\+?[0-9]{7,15}$/.test(val), {
       message: "Invalid phone number",
     }),
-  message: z.string().min(1, "Message is required"),
+  message: z.string().trim().min(1, "Message is required"),
 });

@@ -9,6 +9,7 @@ export default function useContactFormRequest() {
 
   const sendContactFormRequest = async (data) => {
     setLoading(true);
+
     try {
       await toast.promise(
         saveContactForm(data),
@@ -32,8 +33,10 @@ export default function useContactFormRequest() {
           duration: 5000,
         }
       );
+      return true;
     } catch (error) {
       console.error("[useContactFormRequest !! Custom Hook Error]", error);
+      return false;
     } finally {
       setLoading(false);
     }

@@ -19,14 +19,23 @@ function ContactForm() {
   const { sendContactFormRequest, loading } = useContactFormRequest();
 
   const onSubmit = async (data) => {
-    await sendContactFormRequest(data);
-    reset();
+    // Trim all string fields before sending
+    const trimmedData = {
+      name: data.name.trim(),
+      email: data.email.trim(),
+      phone: data.phone ? data.phone.trim() : "",
+      message: data.message.trim(),
+    };
+
+    const success = await sendContactFormRequest(trimmedData);
+    if (success) reset(); // Only reset form on successful submit
   };
 
   return (
     <form
       className="flex flex-col gap-30 lg:gap-60"
       onSubmit={handleSubmit(onSubmit)}
+      noValidate
     >
       <div className="contact-form-spacing">
         <label htmlFor="name" className="contact-form-heading">
@@ -39,6 +48,7 @@ function ContactForm() {
           name="name"
           autoComplete="name"
           className="contact-form-input"
+          aria-invalid={errors.name ? "true" : "false"}
         />
         {errors.name && <p className="text-red-500">{errors.name.message}</p>}
       </div>
@@ -54,6 +64,7 @@ function ContactForm() {
           name="email"
           autoComplete="email"
           className="contact-form-input"
+          aria-invalid={errors.email ? "true" : "false"}
         />
         {errors.email && <p className="text-red-500">{errors.email.message}</p>}
       </div>
@@ -69,6 +80,7 @@ function ContactForm() {
           name="phone"
           autoComplete="tel"
           className="contact-form-input"
+          aria-invalid={errors.phone ? "true" : "false"}
         />
         {errors.phone && <p className="text-red-500">{errors.phone.message}</p>}
       </div>
@@ -82,6 +94,7 @@ function ContactForm() {
           id="message"
           name="message"
           className="contact-form-input"
+          aria-invalid={errors.message ? "true" : "false"}
         ></textarea>
         {errors.message && (
           <p className="text-red-500">{errors.message.message}</p>
