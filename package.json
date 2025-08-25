@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email-dev": "npx react-email dev --dir emails"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
+    "@react-email/components": "^0.5.1",
     "firebase": "^12.1.0",
     "gsap": "^3.13.0",
     "next": "15.3.4",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@react-email/preview-server": "^4.2.8",
     "@tailwindcss/postcss": "^4",
     "daisyui": "^5.0.43",
     "eslint": "^9",

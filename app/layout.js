@@ -11,14 +11,6 @@ const bebas = Bebas_Neue({
   display: "swap",
 });
 
-const pop = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
 const mont = Montserrat({
   variable: "--montserrat",
   subsets: ["latin"],
@@ -38,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${bebas.variable} ${pop.variable} ${mont.variable} font-sans antialiased`}
+      className={`${bebas.variable} ${mont.variable} font-sans antialiased`}
     >
       <body className="body-styles">
         <Header />

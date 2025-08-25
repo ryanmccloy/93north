@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { saveContactForm } from "@/app/_lib/data-service";
 import { Resend } from "resend";
+import ContactFormSubmission from "@/emails/ContactFormSubmission";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -13,16 +14,16 @@ export async function POST(req) {
 
     // Send email to user
     await resend.emails.send({
-      from: "93 North Studio <ryan@93northstudio.com>",
+      from: "93 North Studio <contact@93northstudio.com>",
       to: email,
       subject: "Thanks for contacting us!",
-      html: `<p>Hi ${name},</p><p>Thanks for reaching out! We’ll be in touch shortly.</p>`,
+      react: <ContactFormSubmission name={name} />,
     });
 
     // Send email to yourself
     await resend.emails.send({
-      from: "Website Contact Form <ryan@93northstudio.com>",
-      to: "ryan@93northstudio.com",
+      from: "Website Contact Form <contact@93northstudio.com>",
+      to: "contact@93northstudio.com",
       subject: "New contact form submission",
       html: `<p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
