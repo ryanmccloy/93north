@@ -21,7 +21,13 @@ function ProjectOverview() {
           >
             <h4 className="standard-heading">Goneichiwa</h4>
 
-            <Button underline={true}>Visit site</Button>
+            <Button
+              underline={true}
+              anchor={true}
+              href="https://www.goneichiwa.com/"
+            >
+              Visit site
+            </Button>
           </div>
         </div>
 

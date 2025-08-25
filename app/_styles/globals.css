@@ -65,12 +65,16 @@ leading-loose bg-light text-dark relative tracking-wide font-light min-h-screen 
   @apply text-heading-small sm:text-heading-medium md:text-heading-large font-heading uppercase leading-[1] mb-60 md:mb-90;
 }
 
-/* .service-heading {
-  @apply text-heading-extrasmall sm:text-heading-small md:text-heading-medium font-heading uppercase leading-[1];
-} */
-
 .standard-heading {
   @apply text-heading-extrasmall sm:text-heading-small   uppercase leading-[1];
+}
+
+.underline-button-styles {
+  @apply h-fit relative overflow-hidden hover:cursor-pointer border-b-2 border-accent uppercase text-accent font-medium w-fit;
+}
+
+.rounded-button-styles {
+  @apply rounded-full bg-accent relative overflow-hidden  py-2 px-4 border border-accent hover:cursor-pointer w-fit uppercase;
 }
 
 .strong-paragraph {
