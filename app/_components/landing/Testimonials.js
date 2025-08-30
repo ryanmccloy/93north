@@ -10,7 +10,7 @@ function Testimonials() {
         they had to say about working with us.
       </p>
 
-      <div className="flex flex-col-reverse flex-col lg:flex-row lg:justify-end  gap-30 lg:gap-60 items-end  mt-90 md:mt-120">
+      <div className="flex flex-col-reverse  lg:flex-row lg:justify-end  gap-30 lg:gap-60 items-end  mt-90 md:mt-120">
         <div className="pb-2">
           <Image
             src="/images/landing/testimonials/goneichiwa-logo.svg"
