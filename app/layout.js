@@ -54,6 +54,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${bebas.variable} ${mont.variable} font-sans antialiased`}
+      data-theme="light"
     >
       <body className="body-styles">
         <SeoStructuredData />

@@ -31,7 +31,6 @@ export default function Header() {
       ref={navRef}
       className="navbar fixed -translate-y-full backdrop-blur-sm shadow-xs z-50 w-full px-0 py-2"
       aria-label="Primary Navigation"
-      data-theme="light"
     >
       <div className="width-size flex justify-between items-center w-full ">
         <NavStart />
