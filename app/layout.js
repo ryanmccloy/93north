@@ -44,6 +44,9 @@ export const metadata = {
   icons: {
     icon: "/icon.svg",
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({ children }) {

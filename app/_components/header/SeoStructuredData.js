@@ -7,7 +7,13 @@ export default function SeoStructuredData() {
     "@type": "Organization",
     name: "93 North Studio",
     url: "https://93northstudio.com",
+    email: "contact@93northstudio.com",
     logo: "https://93northstudio.com/icon.svg",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Northern Ireland",
+      addressCountry: "GB",
+    },
     sameAs: [
       "https://www.linkedin.com/company/93-north-studio",
       "https://www.instagram.com/93northstudio",
