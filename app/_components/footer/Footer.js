@@ -6,7 +6,14 @@ function Footer() {
     <footer className="footer footer-horizontal footer-center bg-secondary-grey text-base-content rounded p-10">
       <FooterNav />
       <FooterSocials />
-      <aside>
+      <aside className="flex flex-col gap-30 ">
+        <a
+          href="mailto:contact@93NorthStudio.com"
+          className="underline-animation-wrapper group pb-2"
+        >
+          <span className="relative z-10">contact@93NorthStudio.com</span>
+          <span className="underline-animation-bar" aria-hidden="true" />
+        </a>
         <p>
           Copyright © {new Date().getFullYear()} - All right reserved by 93
           North Studio

@@ -4,7 +4,7 @@ import { sections } from "../../_lib/constants";
 function NavCenter() {
   return (
     <div className="navbar-center hidden lg:flex">
-      <ul className="flex gap-30">
+      <ul className="flex gap-60">
         {sections.map((section) => {
           return (
             <li key={section}>

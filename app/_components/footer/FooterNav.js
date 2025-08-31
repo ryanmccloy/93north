@@ -8,7 +8,9 @@ function FooterNav() {
         {sections.map((section) => {
           return (
             <li key={section}>
-              <NavBarLink href={`#${section}`}>{section}</NavBarLink>
+              <NavBarLink href={`#${section}`} footer={true}>
+                {section}
+              </NavBarLink>
             </li>
           );
         })}

@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-function NavBarLink({ children, href }) {
+function NavBarLink({ children, href, footer = false }) {
   return (
-    <Link href={href} className="relative inline-block group uppercase">
+    <Link
+      href={href}
+      className={`underline-animation-wrapper group ${footer ? "pb-2" : ""}`}
+    >
       <span className="relative z-10">{children}</span>
-      <span
-        className="absolute bottom-0 left-0 w-full h-[2px] bg-accent scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100 group-focus-within:scale-x-100"
-        aria-hidden="true"
-      />
+      <span className="underline-animation-bar" aria-hidden="true" />
     </Link>
   );
 }
