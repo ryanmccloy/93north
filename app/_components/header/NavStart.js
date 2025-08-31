@@ -27,7 +27,7 @@ function NavStart() {
         </button>
         <ul
           tabIndex={0}
-          className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
+          className="menu menu-sm dropdown-content bg-secondary-grey text-dark rounded-box z-10 mt-3 w-52 p-2 shadow"
         >
           {sections.map((section) => {
             return (

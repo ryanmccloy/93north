@@ -3,7 +3,10 @@ import FooterSocials from "./FooterSocials";
 
 function Footer() {
   return (
-    <footer className="footer footer-horizontal footer-center bg-secondary-grey text-base-content rounded p-10">
+    <footer
+      className="footer footer-horizontal footer-center bg-secondary-grey text-dark rounded p-10"
+      data-theme="light"
+    >
       <FooterNav />
       <FooterSocials />
       <aside className="flex flex-col gap-30 ">
