@@ -22,13 +22,13 @@ const mont = Montserrat({
 export const metadata = {
   title: "93 North Studio – Web Design, Development & Marketing",
   description:
-    "Custom web design, development, and digital marketing for businesses.",
+    "Custom web design, development, and digital marketing for your business.",
   openGraph: {
     title: "93 North Studio – Web Design, Development & Marketing",
     description:
       "Custom web design, development, and digital marketing for businesses.",
     url: "https://93northstudio.com",
-    siteName: "93 North Studio",
+    siteName: "93 North Studio - Crafting your Online Presence",
     images: [
       {
         url: "/images/landing/hero.webp",
@@ -45,7 +45,7 @@ export const metadata = {
     icon: "/icon.svg",
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://93northstudio.com/",
   },
 };
 
