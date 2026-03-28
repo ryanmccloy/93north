@@ -14,7 +14,7 @@ export async function POST(req) {
 
     // Send email to user
     await resend.emails.send({
-      from: "93 North Studio <93northstudio@gmail.com>",
+      from: "93 North Studio <noreply@93northstudio.comm>",
       to: email,
       subject: "Thanks for contacting us!",
       react: <ContactFormSubmission name={name} />,
@@ -22,7 +22,7 @@ export async function POST(req) {
 
     // Send email to yourself
     await resend.emails.send({
-      from: "Website Contact Form <93northstudio@gmail.com>",
+      from: "Website Contact Form <noreply@93northstudio.com>",
       to: "93northstudio@gmail.com",
       subject: "New contact form submission",
       html: `<p><strong>Name:</strong> ${name}</p>
