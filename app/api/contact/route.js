@@ -14,7 +14,7 @@ export async function POST(req) {
 
     // Send email to user
     await resend.emails.send({
-      from: "93 North Studio <contact@93northstudio.com>",
+      from: "93 North Studio <93northstudio@gmail.com>",
       to: email,
       subject: "Thanks for contacting us!",
       react: <ContactFormSubmission name={name} />,
@@ -22,8 +22,8 @@ export async function POST(req) {
 
     // Send email to yourself
     await resend.emails.send({
-      from: "Website Contact Form <contact@93northstudio.com>",
-      to: "contact@93northstudio.com",
+      from: "Website Contact Form <93northstudio@gmail.com>",
+      to: "93northstudio@gmail.com",
       subject: "New contact form submission",
       html: `<p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
@@ -36,7 +36,7 @@ export async function POST(req) {
     console.error("[Contact API error:]", err);
     return NextResponse.json(
       { success: false, error: err.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
