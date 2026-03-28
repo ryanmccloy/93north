@@ -8,10 +8,10 @@ function Footer() {
       <FooterSocials />
       <aside className="flex flex-col gap-30 ">
         <a
-          href="mailto:contact@93NorthStudio.com"
+          href="mailto:93NorthStudio@gmail.com"
           className="underline-animation-wrapper group pb-2"
         >
-          <span className="relative z-10">contact@93NorthStudio.com</span>
+          <span className="relative z-10">93NorthStudio@gmail.com</span>
           <span className="underline-animation-bar" aria-hidden="true" />
         </a>
         <p>
